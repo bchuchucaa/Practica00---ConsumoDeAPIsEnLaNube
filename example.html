@@ -1,0 +1,29 @@
+<!doctype html>
+<input onkeyup="getanswer(document.getElementById('qurybox').value)" id="qurybox"><div 
+id="answer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    var data;
+    function getanswer(q){
+        $.get("https://www.omdbapi.com/?s="+q+"&apikey=2e34619f",function(rawdata){
+            var rawstring= JSON.stringify(rawdata);
+            data = JSON.parse(rawstring)
+            console.log("esta es la medida");
+            
+            var count = Object.keys(data.Search).length;
+            console.log(count);
+            console.log(data);
+            
+            for (var i = 0; i < count; i++) {
+                detalles += "<tr>" +
+        "<td>" + data.Search[i].Title + "</td>" +
+        "<td>" + data.Search[i].Year + "</td>" +
+        "<td>" + data.Search[i].imdbID+ "</td>" +
+        "<td>" + data.Search[i].Type + "</td>" +
+        "<td><img src=" + data.Search[i].Poster + "></td>" +
+        "</tr>";
+            }
+            document.getElementById("answer").innerHTML=detalles;
+        });
+    }
+</script>

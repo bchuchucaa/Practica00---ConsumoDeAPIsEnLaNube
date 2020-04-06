@@ -1,0 +1,41 @@
+th{
+    border: 1px solid black;
+}
+input{
+    background-color:black;
+    display: block;
+    width: 50%;
+    height: 20px;
+    margin-top: 2%;
+    margin-left: 37%;
+    font-size: 1.55em;
+    color: white;
+    
+}
+table{
+    
+    background-color: turquoise;
+  
+    
+} 
+
+section{
+    width: 20%;
+    border-width: 2px;
+    border-color:rebeccapurple;
+    background-color: rebeccapurple;
+    float: left;
+    margin-left: 5%;
+}
+label{
+    margin-left: 37%;
+    color: white;
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+}
+img{
+    float: left;
+
+}

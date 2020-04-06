@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Manejo de objetos JSON</title>
+        <script type="text/javascript" src="funciones.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    </head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        
+    <body>
+        <h1>Busca tus peliculas favoritas</h1>
+        <img src="Darth-Vader.jpg" width="200" height="250"/>
+        <section>
+        <label>Search</label>
+        <input onkeyup="apiCall(document.getElementById('qurybox').value)" id="qurybox"><br>
+        <label>Nombre</label>
+        <input onkeyup="apiCallTitulo(document.getElementById('nombre').value)" id="nombre"><br>
+        <label>ID</label>
+        <input onkeyup="apiCallID(document.getElementById('idmovie').value)" id="idmovie"><br>
+        </section>
+        <img src="Darth-Vader.jpg" width="200" height="250"/> alt="">
+        
+        <table id="tablaDatosPersonalesCabecera">
+            <thead>
+                <tr>
+                    <th>TITLE</th>
+                    <th>YEAR</th>
+                    <th>imdbID</th>
+                    <th>TYPE</th>
+                    <th>RELEASED</th>
+                    <th>GENRE</th>
+                    <th>ACTORS</th>
+                    <th>AWARDS</th>
+                    <th>iMAGEN</th>
+                </tr>
+            </thead>
+            <tbody id="tablaDatosPersonalesDetalles">
+
+            </tbody>
+
+        </table>
+    </body>
+    <footer>Designed by @IsraelChuchucaA-PlataformasWeb</footer>
