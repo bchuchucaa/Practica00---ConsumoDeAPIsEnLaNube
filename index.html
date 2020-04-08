@@ -42,8 +42,8 @@
                 <label for="from">
                   <i class="ion-location"></i>
                 </label>
-                <input onkeyup="cargarDatos(document.getElementById('qurybox').value)" id="qurybox" placeholder="tu pelicula"><br>
-                <input type="submit" value="Search">
+                <input onkeyup="cargarDatos(document.getElementById('qurybox').value)" id="qurybox" placeholder="escriba aqui.."><br>
+                <input type="submit" value="Pelicula">
               </form>
               <div id="madeby">
                 <span>
@@ -86,6 +86,7 @@
 
     <div id="mas">
         <table id="informacion" class="table">
+         
 
         </table>
     </div>
@@ -95,11 +96,11 @@
 
     <section class="paginacion">
         <ul>
-            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,1)" class="active">1</button></li>
-            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,2)">2</button></li>
-            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,3)">3</button></li>
-            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,4)">4</button></li>
-            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,5)">5</button></li>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,1,0)" class="active">1</button></li>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,1,5)">2</button></li>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,2,0)">3</button></li>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,2,5)">4</button></li>
+            <li><button type="button" onclick="paginacionv2(document.getElementById('qurybox').value)">></button></li>
         </ul>
     </section>
     </footer>
