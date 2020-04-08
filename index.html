@@ -5,33 +5,76 @@
         <script type="text/javascript" src="funciones.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    </head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    
         
     <body>
-        <h1>Busca tus peliculas favoritas</h1>
-        <img src="Darth-Vader.jpg" width="200" height="250"/>
-        <section>
-        <label>Search</label>
-        <input onkeyup="apiCall(document.getElementById('qurybox').value)" id="qurybox"><br>
+
+        <div class="container">
+
+            <header>
+              <h2><a href="#"><i class="ion-plane"></i> ISRA ALVA</a></h2>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#" title="Hotels">Peliculas</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Flights">Series</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Tours">Accion</a>
+                  </li>
+                  <li>
+                    <a class="btn" href="#" title="Register / Log In">Register/Log In</a>
+                  </li>
+                </ul>
+              </nav>
+            </header>
+          
+            <div class="cover">
+              <h1>Discubre tus peliculas aqui..!</h1>
+              <form  class="flex-form">
+                <label for="from">
+                  <i class="ion-location"></i>
+                </label>
+                <input onkeyup="cargarDatos(document.getElementById('qurybox').value)" id="qurybox" placeholder="tu pelicula"><br>
+                <input type="submit" value="Search">
+              </form>
+              <div id="madeby">
+                <span>
+                  Photo by <a href="https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg" target="_blank">Israel Chuchuca A-Plataformas Web</a>
+                </span>
+              </div>
+            </div>
+          
+          </div>
+
+
+    
+        <h1>Conoce mas de tus peliculas favoritas</h1>
+        <!----<section id="cabecera">
+        <label>Nombre/Titulo</label>
+        <input onkeyup="cargarDatos(document.getElementById('qurybox').value)" id="qurybox"><br>
         <label>Nombre</label>
         <input onkeyup="apiCallTitulo(document.getElementById('nombre').value)" id="nombre"><br>
-        <label>ID</label>
-        <input onkeyup="apiCallID(document.getElementById('idmovie').value)" id="idmovie"><br>
-        </section>
-        <img src="Darth-Vader.jpg" width="200" height="250"/> alt="">
-        
-        <table id="tablaDatosPersonalesCabecera">
+        </section> -->
+      
+        <div id="busqueda" class="table-wrapper">
+        <table id="tablaDatosPersonalesCabecera" class="ft-tabble">
             <thead>
                 <tr>
-                    <th>TITLE</th>
-                    <th>YEAR</th>
+                    <th>Titulo</th>
+                    <th>Anio</th>
                     <th>imdbID</th>
-                    <th>TYPE</th>
-                    <th>RELEASED</th>
-                    <th>GENRE</th>
-                    <th>ACTORS</th>
-                    <th>AWARDS</th>
-                    <th>iMAGEN</th>
+                    <th>Tipo</th>
+                    <th>Extras</th>
+                    <th>Imagen</th>
+                   
                 </tr>
             </thead>
             <tbody id="tablaDatosPersonalesDetalles">
@@ -39,5 +82,25 @@
             </tbody>
 
         </table>
+     </div>
+
+    <div id="mas">
+        <table id="informacion" class="table">
+
+        </table>
+    </div>
+    
     </body>
-    <footer>Designed by @IsraelChuchucaA-PlataformasWeb</footer>
+    <footer>
+
+    <section class="paginacion">
+        <ul>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,1)" class="active">1</button></li>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,2)">2</button></li>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,3)">3</button></li>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,4)">4</button></li>
+            <li><button type="button" onclick="paginacion(document.getElementById('qurybox').value,5)">5</button></li>
+        </ul>
+    </section>
+    </footer>
+   
